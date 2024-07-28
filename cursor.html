@@ -14,6 +14,7 @@
         body{
             height: 100vh;
             background-color: rgb(35, 42, 52);
+            cursor: none;
         }
         .cursor-dot{
             height: 5px;
@@ -49,13 +50,11 @@
     window.addEventListener("mousemove",function(e){
         const posX=e.clientX;
         const posY=e.clientY;
-
-        // cursordot.style.left=`${posX}px`;
-        // cursordot.style.top=`${posY}px`;
+        
         cursordot.animate({
             left: `${posX}px`,
             top:`${posY}px`
-        },{ duration:1700, fill: "forwards" });
+        },{ duration:700, fill: "forwards" });
 
         cursoroutline.style.left=`${posX}px`;
         cursoroutline.style.top=`${posY}px`;
